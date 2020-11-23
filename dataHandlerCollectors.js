@@ -59,8 +59,11 @@ Data.prototype.createRoom = function(roomId, playerCount, lang="en") {
   this.rooms[roomId] = room;
 }
 
-Data.prototype.createDeck = function(lang) {
-  let deck = this.data[collectorsDeck];
+Data.prototype.createDeck = function() {
+  // we want a copy of the deck array, not a reference to it so we use the
+  // spread operator (...) to copy the items. Note that this is a shallow copy
+  // so it is not generalizable to all copy problems
+  let deck = [...this.data[collectorsDeck]];
   return shuffle(deck);
 }
 

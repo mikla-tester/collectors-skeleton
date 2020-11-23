@@ -1,13 +1,13 @@
 <template>
   <div>
     <main>
-      <div class="my-cards">
-        <CollectorsCard v-for="(card, index) in myCards" :card="card" :key="index"/>
-      </div>
       <div class="buttons">
         <button @click="drawCard">
           {{ labels.draw }} 
         </button>
+      </div>
+      <div class="my-cards">
+        <CollectorsCard v-for="(card, index) in myCards" :card="card" :key="index"/>
       </div>
     </main>
     <footer>
