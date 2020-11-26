@@ -1,6 +1,7 @@
 <template>
   <div>
     <main>
+      <h1>Collectors</h1>
       <div class="buttons">
         <button @click="drawCard">
           {{ labels.draw }} 
